@@ -27,7 +27,7 @@ J = (-1 / m) * (y' * log(h_theta) + (1 - y)' * log(1 - h_theta)) + (lambda / (2 
 grad(1,:) = (1 / m) * (X(:, 1)' * (h_theta - y));
 
 % compute gradient of theta 2 to theta n
-grad(2:size(theta), :) = (1 / m) * ((X(:, 2:size(theta)))' * ((h_theta - y)) + theta(2:size(theta), :) * lambda / m);
+grad(2:end, :) = (1 / m) * (X(:, 2:size(theta))' * (h_theta - y)) + theta(2:end, :) * lambda / m;
 
 % =============================================================
 
